@@ -50,4 +50,5 @@ function add3(one, two, three) {
 
 module.exports = curryN;
 
-console.log(curryN(add3,3)(1)(2).arguments);
+//testing it
+// console.log(curryN(add3,3)(1)(2).arguments);
