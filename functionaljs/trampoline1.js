@@ -32,18 +32,16 @@ function factorial (n) {
 
 function trampoline(fn){
 	while(fn && typeof fn === 'function'){
-    console.log('TRAMPOLINE:invoking f:\n        %s\n', fn);
     fn = fn();
 	}
 }
 
-function ape(operation, num){
+module.exports = function(operation, num){
 	trampoline(function(){
-    console.log('\nAPE: calling repeat with operation:\n\n%s \nand num:\n\n%s\n', operation,num);
 		return repeat(operation, num);
 	});
 }
 
 // var x = 4;
 // console.log('%s!: %s',x,factorial(4));
-console.log(ape(factorial,4));
+// console.log(ape(factorial,4));
